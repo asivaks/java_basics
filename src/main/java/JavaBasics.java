@@ -87,5 +87,26 @@ public class JavaBasics {
             System.out.print(arr[i] + " ");
         }
 
+        System.out.println();
+
+        float myFloat2 = 0.5f;
+        double myDouble2 = 0;
+        boolean doublePrecision = false;
+        for (int i = 0; i < 20; i++) {
+            if (!doublePrecision) {
+                myFloat2 = myFloat2 * myFloat2;
+                System.out.printf("%.8f\n", myFloat2);
+                if (myFloat2 < 0.00001530) {
+                    doublePrecision = true;
+                    myDouble2 = (double) myFloat2;
+                }
+            } else {
+                myDouble2 = myDouble2 * myDouble2;
+                System.out.printf("%.15f\n", myDouble2);
+            }
+
+
+        }
+
     }
 }
